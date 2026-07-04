@@ -52,6 +52,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_blossom
 TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_blossom
 
 # Kernel
+TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/headers # header stub, its headers_install just rsyncs pregenerated headers
 TARGET_KERNEL_CONFIG := blossom_defconfig # no file, only make build system happy
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
