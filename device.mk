@@ -433,5 +433,9 @@ PRODUCT_PACKAGES += \
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Prebuilt Q-era kernel (4.19) cannot satisfy R+ FCM kernel config requirements;
+# skip kernel requirement enforcement in checkvintf (target-level bumped to 5 for A14).
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
