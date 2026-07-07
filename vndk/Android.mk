@@ -1,10 +1,10 @@
-LOCAL_PATH := prebuilts/vndk
+LOCAL_PATH := device/xiaomi/blossom/prebuilts/vndk
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libutils-v30
 LOCAL_MULTILIB := both
-LOCAL_SRC_FILES_arm := v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so
-LOCAL_SRC_FILES_arm64 := v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so
+LOCAL_SRC_FILES_arm := v30/arm/libutils-v30.so
+LOCAL_SRC_FILES_arm64 := v30/arm64/libutils-v30.so
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TARGET_ARCH := arm arm64
@@ -15,6 +15,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libui-v32
+LOCAL_PATH := prebuilts/vndk
 LOCAL_SRC_FILES := v32/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
