@@ -17,7 +17,9 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_CPPFLAGS := -Wall -Werror -Wextra
 LOCAL_CFLAGS := -DLAZY_SERVICE
 LOCAL_C_INCLUDES := frameworks/opt/net/wifi/libwifi_hal/include
-LOCAL_HEADER_LIBRARIES := libhardware_legacy_headers
+LOCAL_HEADER_LIBRARIES := \
+    libhardware_legacy_headers \
+    wifi_legacy_headers
 LOCAL_VINTF_FRAGMENTS := android.hardware.wifi-service.xml
 
 LOCAL_REQUIRED_MODULES := \
@@ -36,7 +38,7 @@ LOCAL_SHARED_LIBRARIES := \
     libwifi-hal-mtk \
     libwifi-system-iface \
     libxml2 \
-    android.hardware.wifi-V2-ndk
+    android.hardware.wifi-V3-ndk
 
 LOCAL_STATIC_LIBRARIES := android.hardware.wifi-service-lib
 
