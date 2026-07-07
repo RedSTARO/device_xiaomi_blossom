@@ -144,11 +144,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
-
 # WLAN
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0.vendor \
@@ -187,8 +182,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1.vendor \
     android.hardware.nfc@1.2.vendor \
     com.android.nfc_extras \
-    Tag \
-    NfcNci
+    Tag
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -204,6 +198,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4.vendor \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor \
+    libhidlbase-v32 \
     libutils-v30 \
     libutils-v32
 

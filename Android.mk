@@ -9,6 +9,11 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),blossom)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := prebuilt_libfmjni
+LOCAL_REQUIRED_MODULES := libfmjni
+include $(BUILD_PHONY_PACKAGE)
+
 VENDOR_SYMLINKS := \
     $(TARGET_OUT_VENDOR)/lib \
     $(TARGET_OUT_VENDOR)/lib64 \
