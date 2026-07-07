@@ -13,6 +13,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
+AB_OTA_UPDATER := false
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
